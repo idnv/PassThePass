@@ -1,0 +1,18 @@
+﻿
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.storageapi.js"></script>
+@{
+    ViewBag.Title = "Password have been changed";
+}
+
+<h2>
+    הסיסמא שונתה בהצלחה! כעת הינך יכול להתחבר באמצעות הסיסמא החדשה
+</h2>
+
+@* Deleting the local storage!! all the saved mail tries and passwords *@
+<script type="text/javascript">
+    storage = $.localStorage;
+    $(document).ready(function () {
+        storage.removeAll();
+    });
+</script>

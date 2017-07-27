@@ -1,0 +1,63 @@
+﻿@model PasswordGenerator2.Models.AvgRes
+<script src="~/js/jquery-1.10.2.js"></script>
+<script src="~/js/jquery.storageapi.js"></script>
+@{
+    ViewBag.Title = "Thanks";
+}
+
+
+  <h2>ממוצע תוצאות עכשווי:</h2>  
+
+   <p>מספר המילים שיש בטקסט: &nbsp;&nbsp;&nbsp; @Model.current_numOfWriitenWords</p> 
+   <p>מספר המילים שנכתבות נכון בממוצע: &nbsp;&nbsp;&nbsp; @Model.current_correctWords</p>
+   <p>מספר המילים השגויות בממוצע: &nbsp;&nbsp;&nbsp; @Model.current_numOfEntryErrors</p>
+   <p>ממוצע רמת הדיוק באחוזים: &nbsp;&nbsp;&nbsp; @Model.current_accuracy %</p>
+
+
+
+
+    <h2>ממוצע תוצאות קודם:</h2>
+
+    <p>מספר המילים שיש בטקסט: &nbsp;&nbsp;&nbsp; @Model.previous_numOfWriitenWords</p>
+    <p>מספר המילים שנכתבות נכון בממוצע: &nbsp;&nbsp;&nbsp; @Model.previous_correctWords</p>
+    <p>מספר המילים השגויות בממוצע: &nbsp;&nbsp;&nbsp; @Model.previous_numOfEntryErrors</p>
+    <p>ממוצע רמת הדיוק באחוזים: &nbsp;&nbsp;&nbsp; @Model.previous_accuracy %</p>
+
+
+
+    <h2>מסר: &nbsp;&nbsp;&nbsp; @ViewBag.Message</h2>
+
+    <h2>נתראה בשבוע הבא! :)</h2>
+
+
+@*<h2>
+    ממוצע תוצאות עכשווי:
+ 
+    מספר המילים שנכתבו: &nbsp;&nbsp;&nbsp; @Model.current_numOfWriitenWords
+    מספר המילים שנכתבו נכון: &nbsp;&nbsp;&nbsp; @Model.current_correctWords
+    מספר המילים השגויות: &nbsp;&nbsp;&nbsp; @Model.current_numOfEntryErrors
+    רמת הדיוק באחוזים: &nbsp;&nbsp;&nbsp; @Model.current_accuracy
+
+   
+
+
+    ממוצע תוצאות קודם:
+
+    מספר המילים שנכתבו: &nbsp;&nbsp;&nbsp; @Model.previous_numOfWriitenWords
+    מספר המילים שנכתבו נכון: &nbsp;&nbsp;&nbsp; @Model.previous_correctWords
+    מספר המילים השגויות: &nbsp;&nbsp;&nbsp; @Model.previous_numOfEntryErrors
+    רמת הדיוק באחוזים: &nbsp;&nbsp;&nbsp; @Model.previous_accuracy
+
+
+
+   
+    נתראה בשבוע הבא! :)
+</h2>*@
+
+@* Deleting the local storage!! all the saved mail tries and passwords *@
+<script type="text/javascript">
+    storage = $.localStorage;
+    $(document).ready(function () {
+        storage.removeAll();
+    });
+</script>

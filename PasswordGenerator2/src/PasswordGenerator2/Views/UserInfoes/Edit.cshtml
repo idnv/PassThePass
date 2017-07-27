@@ -1,0 +1,67 @@
+@model PasswordGenerator2.Models.UserInfo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>UserInfo</h4>
+        <hr />
+        <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="ID" />
+        <div class="form-group">
+            <label asp-for="city" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="city" class="form-control" />
+                <span asp-validation-for="city" class="text-danger" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="familyStatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="familyStatus" class="form-control"></select>
+                <span asp-validation-for="familyStatus" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="firstName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="firstName" class="form-control" />
+                <span asp-validation-for="firstName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="gender" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="gender" class="form-control"></select>
+                <span asp-validation-for="gender" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="lastName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="lastName" class="form-control" />
+                <span asp-validation-for="lastName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+

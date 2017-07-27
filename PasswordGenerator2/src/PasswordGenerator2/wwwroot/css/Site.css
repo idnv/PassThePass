@@ -1,0 +1,53 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+ input,  textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+ .radioButton{
+     width:20px;
+     margin:4px 10px 0px 0px;
+ }
+
+ .passwordDisplay{
+     font-size:30px;
+ }
+ .default-hidden {
+    display: none;
+}
+
+ .small-radio-button{
+     width:30px;
+ }
+
+ .small-padding{
+     padding:5px;
+ }
+
+ .small-check-box{
+    width: 20px;
+ }
